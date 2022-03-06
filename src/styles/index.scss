@@ -1,0 +1,86 @@
+//primary
+$color-p-1: hsl(12, 88%, 59%);
+$color-p-2: hsl(228, 39%, 23%);
+
+//neutral
+$color-n-1: hsl(227, 12%, 61%);
+$color-n-2: hsl(233, 12%, 13%);
+$color-n-3: hsl(13, 100%, 96%);
+$color-n-4: hsl(0, 0%, 98%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("../../images/bg-tablet-pattern.svg");
+  background-size: contain;
+  background-attachment: fixed;
+  font-family: "Be Vietnam Pro", sans-serif;
+  text-align: center;
+}
+
+#root {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: $color-p-2;
+}
+
+p {
+  color: $color-n-1;
+  max-width: 500px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+a {
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
+
+.get-started {
+  border: none;
+  background-color: $color-p-1;
+  color: $color-n-3;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0px 3px 5px hsla(12, 88%, 59%, 0.445);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.over-hidden {
+  overflow: hidden;
+}
+
+@media (min-width: 1280px) {
+  #root {
+    position: relative;
+    max-width: 1320px;
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
+}

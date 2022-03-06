@@ -1,0 +1,150 @@
+$color-p-1: hsl(12, 88%, 59%);
+$color-n-2: hsl(233, 12%, 13%);
+$color-n-4: hsl(0, 0%, 98%);
+
+footer {
+  background-color: $color-n-2;
+  color: $color-n-4;
+  padding: 50px 0;
+
+  ul {
+    column-count: 2;
+    width: 80%;
+    margin: 50px auto;
+    li {
+      margin-bottom: 20px;
+      a {
+        text-decoration: none;
+        color: $color-n-4;
+        font-size: 0.7rem;
+        &:hover {
+          cursor: pointer;
+          color: $color-p-1;
+        }
+      }
+    }
+  }
+
+  div {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: whitesmoke;
+
+      &:hover {
+        fill: $color-p-1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  p {
+    font-size: 0.6rem;
+  }
+
+  form {
+    input {
+      padding: 7px 15px;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      &::placeholder {
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: rgba(128, 128, 128, 0.527);
+      }
+    }
+
+    button {
+      color: $color-n-4;
+      border: none;
+      background-color: $color-p-1;
+      font-weight: bolder;
+      font-size: 0.6rem;
+      padding: 10px 20px;
+      border-radius: 30px;
+      margin-left: 10px;
+    }
+  }
+
+  #logo {
+    width: 150px;
+    height: 30px;
+    transform: scale(0.8);
+    margin-bottom: 30px;
+
+    fill: white;
+  }
+
+  #front-ment {
+    width: 100%;
+    a {
+      color: inherit;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  footer {
+    height: 300px;
+    position: relative;
+    width: 100%;
+
+    form {
+      position: absolute;
+      right: 100px;
+      top: 60px;
+      input {
+        width: 150px;
+      }
+    }
+
+    #copy {
+      position: absolute;
+      bottom: 60px;
+      font-size: 0.6rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: fit-content;
+    }
+
+    ul {
+      position: absolute;
+      width: 300px;
+      left: calc(50% - 150px);
+      top: 70px;
+      margin: 0;
+      text-align: left;
+    }
+
+    #logo {
+      position: absolute;
+      left: 120px;
+      top: 60px;
+    }
+
+    #front-ment {
+      width: 400px;
+      position: absolute;
+      left: calc(50% - 200px);
+      top: 250px;
+      margin: 0;
+
+      p {
+        width: fit-content;
+        font-size: 0.6rem;
+      }
+    }
+
+    div {
+      position: absolute;
+      width: 180px;
+      top: 130px;
+      left: 120px;
+    }
+  }
+}

@@ -1,0 +1,152 @@
+$color-p-1: hsl(12, 88%, 59%);
+$color-n-4: hsl(0, 0%, 98%);
+
+#cases-sec {
+  background-color: white;
+  padding-top: 20px;
+  height: 500px;
+  margin-top: 50px;
+  overflow: hidden;
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  button {
+    margin-top: 270px;
+  }
+
+  #slider {
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    overflow: hidden;
+    margin: 0 auto;
+
+    div {
+      margin: 10px auto;
+      width: 100%;
+      padding: 0 30px;
+      height: 250px;
+      background-color: $color-n-4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: 10px;
+
+      h2 {
+        margin: 0 auto;
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        width: 230px;
+      }
+
+      img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+
+  #slider-control {
+    bottom: 90px;
+    width: 230px;
+    height: 40px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0px;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      top: 0;
+      position: absolute;
+      width: 80px;
+      left: calc(50% - 40px);
+
+      li {
+        width: 7px;
+        height: 7px;
+        border: 1px solid $color-p-1;
+        border-radius: 50%;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    button {
+      border: none;
+      background-color: $color-p-1;
+      color: $color-n-4;
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 5px;
+    }
+
+    #prev-slide {
+      top: 0;
+      left: 40px;
+      position: absolute;
+      margin: 0;
+    }
+
+    #next-slide {
+      position: absolute;
+      right: 40px;
+      margin: 0;
+    }
+  }
+
+  .current-slide {
+    background-color: $color-p-1;
+  }
+
+  .slide {
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+@media (min-width: 1280px) {
+  #cases-sec {
+    margin-top: 1200px;
+    padding: 20px 0;
+    height: 500px;
+
+    #slider {
+      width: 100%;
+      div {
+        padding: 0 10px;
+        width: 300px;
+        height: 350px;
+        p {
+          font-size: 1.1rem;
+          width: 300px;
+        }
+
+        h2 {
+          font-size: 1.7rem;
+          margin: 20px auto;
+        }
+
+        img {
+          left: calc(50% - 55px);
+          top: -50px;
+          width: 110px;
+          height: 110px;
+        }
+      }
+    }
+
+    #slider-control {
+      display: none;
+    }
+  }
+}

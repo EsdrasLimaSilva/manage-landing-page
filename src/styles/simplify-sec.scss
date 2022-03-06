@@ -1,0 +1,39 @@
+$color-p-1: hsl(12, 88%, 59%);
+$color-n-4: hsl(0, 0%, 98%);
+
+#simp-sec {
+  padding: 60px 0;
+  background: $color-p-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  h2 {
+    color: $color-n-4;
+    width: 75%;
+    margin: 10px auto;
+  }
+
+  button {
+    background-color: $color-n-4;
+    color: $color-p-1;
+  }
+}
+
+@media (min-width: 1280px) {
+  #simp-sec {
+    display: flex;
+    justify-content: space-around;
+
+    h2 {
+      width: fit-content;
+      text-align: left;
+    }
+
+    button {
+      width: 130px;
+      height: 40px;
+    }
+  }
+}

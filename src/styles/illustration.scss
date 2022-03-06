@@ -1,0 +1,17 @@
+#illustration {
+  img {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1280px) {
+  #illustration {
+    position: absolute;
+    right: 160px;
+    z-index: 10;
+
+    img {
+      width: 400px;
+    }
+  }
+}
